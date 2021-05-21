@@ -95,7 +95,6 @@ enum GameResult {
 
 message OccupyPositionResponse {
     OccupyResult occupyResult = 1;
-    GameResult gameResult = 2;
 }
 
 message CheckGameResultRequest {

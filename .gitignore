@@ -3,5 +3,4 @@
 **/*.log
 **/.idea
 **/target
-InterviewService/src/main/generated-java
 logs

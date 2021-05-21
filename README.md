@@ -12,7 +12,7 @@ Follow the provided hello world rpc process and its UAT test example, implement 
 
 1. A player could create a new Tic-tac-toe game.
 2. The second player could join the existing game
-3. Each player could place their X or O in turn, and they should be told the game result: Ongoing, Win, Draw
+3. Each player could place their X or O in turn
 4. Each player could query the game result: WaitMoreJoin, Ongoing, Win, Draw, Lose
 
 
