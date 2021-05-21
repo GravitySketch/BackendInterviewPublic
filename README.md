@@ -36,7 +36,7 @@ We expect you to be able to:
 
 You **don't** need to implement tasks 1, 2, 3, 4 and the game. You just need to be able to demonstrate the points above.
 
-We wouldn't expect it to take more than 8 hours to fulfill these points.
+We expect you to finish those bullet points less than 3 hours.
 
 ### Experienced Candidates
 We expect you to finish all points in graduate to junior level as well as meet the requirements listed above to complete the game in no more than 2 hours time.
