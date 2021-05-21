@@ -39,3 +39,11 @@ We expect you to finish those bullet points less than 8 hours.
 
 ### Experienced Candidates
 We expect you to finish all points in graduate to junior level as well as complete tasks 1, 2, 3, 4 no more than 2 hours time.
+
+# What's next?
+
+### Graduates to Junior level
+Tell us if you are confident to meet our expectation or not. If you are, we would move to the next interview and discuss this project with you.
+
+### Experienced Candidates
+Submit your code implementation, we will review your code and give you our feedback. We will discuss your code and design with you in the next interview
