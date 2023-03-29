@@ -23,7 +23,7 @@ __The following tasks need to be completed in order for the game to be functiona
 ### InterviewService/proto
 rpc.proto defines the api provided by the service. It has defined 5 rpc apis. HelloWorldRequest is the example api and others are the apis for the practice tasks.
 
-For any proto file change, you should run `mvn clean compile` to re-generate the java code for the changes.
+For any proto file change, you should run `./mvnw clean compile` to re-generate the java code for the changes.
   
 ### InterviewServiceUAT
 It contains a user acceptance test example to demo how to write a test for the rest api you provided.
