@@ -95,14 +95,14 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 106: {
-            com.gravitysketch.interview.OccupyPositionResponse.Builder subBuilder = null;
-            if (occupyPositionResponse_ != null) {
-              subBuilder = occupyPositionResponse_.toBuilder();
+            com.gravitysketch.interview.TakePositionResponse.Builder subBuilder = null;
+            if (takePositionResponse_ != null) {
+              subBuilder = takePositionResponse_.toBuilder();
             }
-            occupyPositionResponse_ = input.readMessage(com.gravitysketch.interview.OccupyPositionResponse.parser(), extensionRegistry);
+            takePositionResponse_ = input.readMessage(com.gravitysketch.interview.TakePositionResponse.parser(), extensionRegistry);
             if (subBuilder != null) {
-              subBuilder.mergeFrom(occupyPositionResponse_);
-              occupyPositionResponse_ = subBuilder.buildPartial();
+              subBuilder.mergeFrom(takePositionResponse_);
+              takePositionResponse_ = subBuilder.buildPartial();
             }
 
             break;
@@ -240,27 +240,27 @@ private static final long serialVersionUID = 0L;
     return getJoinGameResponse();
   }
 
-  public static final int OCCUPYPOSITIONRESPONSE_FIELD_NUMBER = 13;
-  private com.gravitysketch.interview.OccupyPositionResponse occupyPositionResponse_;
+  public static final int TAKEPOSITIONRESPONSE_FIELD_NUMBER = 13;
+  private com.gravitysketch.interview.TakePositionResponse takePositionResponse_;
   /**
-   * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
-   * @return Whether the occupyPositionResponse field is set.
+   * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
+   * @return Whether the takePositionResponse field is set.
    */
-  public boolean hasOccupyPositionResponse() {
-    return occupyPositionResponse_ != null;
+  public boolean hasTakePositionResponse() {
+    return takePositionResponse_ != null;
   }
   /**
-   * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
-   * @return The occupyPositionResponse.
+   * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
+   * @return The takePositionResponse.
    */
-  public com.gravitysketch.interview.OccupyPositionResponse getOccupyPositionResponse() {
-    return occupyPositionResponse_ == null ? com.gravitysketch.interview.OccupyPositionResponse.getDefaultInstance() : occupyPositionResponse_;
+  public com.gravitysketch.interview.TakePositionResponse getTakePositionResponse() {
+    return takePositionResponse_ == null ? com.gravitysketch.interview.TakePositionResponse.getDefaultInstance() : takePositionResponse_;
   }
   /**
-   * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+   * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
    */
-  public com.gravitysketch.interview.OccupyPositionResponseOrBuilder getOccupyPositionResponseOrBuilder() {
-    return getOccupyPositionResponse();
+  public com.gravitysketch.interview.TakePositionResponseOrBuilder getTakePositionResponseOrBuilder() {
+    return getTakePositionResponse();
   }
 
   public static final int CHECKGAMERESULTRESPONSE_FIELD_NUMBER = 14;
@@ -312,8 +312,8 @@ private static final long serialVersionUID = 0L;
     if (joinGameResponse_ != null) {
       output.writeMessage(12, getJoinGameResponse());
     }
-    if (occupyPositionResponse_ != null) {
-      output.writeMessage(13, getOccupyPositionResponse());
+    if (takePositionResponse_ != null) {
+      output.writeMessage(13, getTakePositionResponse());
     }
     if (checkGameResultResponse_ != null) {
       output.writeMessage(14, getCheckGameResultResponse());
@@ -343,9 +343,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(12, getJoinGameResponse());
     }
-    if (occupyPositionResponse_ != null) {
+    if (takePositionResponse_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(13, getOccupyPositionResponse());
+        .computeMessageSize(13, getTakePositionResponse());
     }
     if (checkGameResultResponse_ != null) {
       size += com.google.protobuf.CodedOutputStream
@@ -382,10 +382,10 @@ private static final long serialVersionUID = 0L;
       if (!getJoinGameResponse()
           .equals(other.getJoinGameResponse())) return false;
     }
-    if (hasOccupyPositionResponse() != other.hasOccupyPositionResponse()) return false;
-    if (hasOccupyPositionResponse()) {
-      if (!getOccupyPositionResponse()
-          .equals(other.getOccupyPositionResponse())) return false;
+    if (hasTakePositionResponse() != other.hasTakePositionResponse()) return false;
+    if (hasTakePositionResponse()) {
+      if (!getTakePositionResponse()
+          .equals(other.getTakePositionResponse())) return false;
     }
     if (hasCheckGameResultResponse() != other.hasCheckGameResultResponse()) return false;
     if (hasCheckGameResultResponse()) {
@@ -417,9 +417,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + JOINGAMERESPONSE_FIELD_NUMBER;
       hash = (53 * hash) + getJoinGameResponse().hashCode();
     }
-    if (hasOccupyPositionResponse()) {
-      hash = (37 * hash) + OCCUPYPOSITIONRESPONSE_FIELD_NUMBER;
-      hash = (53 * hash) + getOccupyPositionResponse().hashCode();
+    if (hasTakePositionResponse()) {
+      hash = (37 * hash) + TAKEPOSITIONRESPONSE_FIELD_NUMBER;
+      hash = (53 * hash) + getTakePositionResponse().hashCode();
     }
     if (hasCheckGameResultResponse()) {
       hash = (37 * hash) + CHECKGAMERESULTRESPONSE_FIELD_NUMBER;
@@ -578,11 +578,11 @@ private static final long serialVersionUID = 0L;
         joinGameResponse_ = null;
         joinGameResponseBuilder_ = null;
       }
-      if (occupyPositionResponseBuilder_ == null) {
-        occupyPositionResponse_ = null;
+      if (takePositionResponseBuilder_ == null) {
+        takePositionResponse_ = null;
       } else {
-        occupyPositionResponse_ = null;
-        occupyPositionResponseBuilder_ = null;
+        takePositionResponse_ = null;
+        takePositionResponseBuilder_ = null;
       }
       if (checkGameResultResponseBuilder_ == null) {
         checkGameResultResponse_ = null;
@@ -632,10 +632,10 @@ private static final long serialVersionUID = 0L;
       } else {
         result.joinGameResponse_ = joinGameResponseBuilder_.build();
       }
-      if (occupyPositionResponseBuilder_ == null) {
-        result.occupyPositionResponse_ = occupyPositionResponse_;
+      if (takePositionResponseBuilder_ == null) {
+        result.takePositionResponse_ = takePositionResponse_;
       } else {
-        result.occupyPositionResponse_ = occupyPositionResponseBuilder_.build();
+        result.takePositionResponse_ = takePositionResponseBuilder_.build();
       }
       if (checkGameResultResponseBuilder_ == null) {
         result.checkGameResultResponse_ = checkGameResultResponse_;
@@ -702,8 +702,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasJoinGameResponse()) {
         mergeJoinGameResponse(other.getJoinGameResponse());
       }
-      if (other.hasOccupyPositionResponse()) {
-        mergeOccupyPositionResponse(other.getOccupyPositionResponse());
+      if (other.hasTakePositionResponse()) {
+        mergeTakePositionResponse(other.getTakePositionResponse());
       }
       if (other.hasCheckGameResultResponse()) {
         mergeCheckGameResultResponse(other.getCheckGameResultResponse());
@@ -1146,123 +1146,123 @@ private static final long serialVersionUID = 0L;
       return joinGameResponseBuilder_;
     }
 
-    private com.gravitysketch.interview.OccupyPositionResponse occupyPositionResponse_;
+    private com.gravitysketch.interview.TakePositionResponse takePositionResponse_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.gravitysketch.interview.OccupyPositionResponse, com.gravitysketch.interview.OccupyPositionResponse.Builder, com.gravitysketch.interview.OccupyPositionResponseOrBuilder> occupyPositionResponseBuilder_;
+        com.gravitysketch.interview.TakePositionResponse, com.gravitysketch.interview.TakePositionResponse.Builder, com.gravitysketch.interview.TakePositionResponseOrBuilder> takePositionResponseBuilder_;
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
-     * @return Whether the occupyPositionResponse field is set.
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
+     * @return Whether the takePositionResponse field is set.
      */
-    public boolean hasOccupyPositionResponse() {
-      return occupyPositionResponseBuilder_ != null || occupyPositionResponse_ != null;
+    public boolean hasTakePositionResponse() {
+      return takePositionResponseBuilder_ != null || takePositionResponse_ != null;
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
-     * @return The occupyPositionResponse.
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
+     * @return The takePositionResponse.
      */
-    public com.gravitysketch.interview.OccupyPositionResponse getOccupyPositionResponse() {
-      if (occupyPositionResponseBuilder_ == null) {
-        return occupyPositionResponse_ == null ? com.gravitysketch.interview.OccupyPositionResponse.getDefaultInstance() : occupyPositionResponse_;
+    public com.gravitysketch.interview.TakePositionResponse getTakePositionResponse() {
+      if (takePositionResponseBuilder_ == null) {
+        return takePositionResponse_ == null ? com.gravitysketch.interview.TakePositionResponse.getDefaultInstance() : takePositionResponse_;
       } else {
-        return occupyPositionResponseBuilder_.getMessage();
+        return takePositionResponseBuilder_.getMessage();
       }
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
      */
-    public Builder setOccupyPositionResponse(com.gravitysketch.interview.OccupyPositionResponse value) {
-      if (occupyPositionResponseBuilder_ == null) {
+    public Builder setTakePositionResponse(com.gravitysketch.interview.TakePositionResponse value) {
+      if (takePositionResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        occupyPositionResponse_ = value;
+        takePositionResponse_ = value;
         onChanged();
       } else {
-        occupyPositionResponseBuilder_.setMessage(value);
+        takePositionResponseBuilder_.setMessage(value);
       }
 
       return this;
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
      */
-    public Builder setOccupyPositionResponse(
-        com.gravitysketch.interview.OccupyPositionResponse.Builder builderForValue) {
-      if (occupyPositionResponseBuilder_ == null) {
-        occupyPositionResponse_ = builderForValue.build();
+    public Builder setTakePositionResponse(
+        com.gravitysketch.interview.TakePositionResponse.Builder builderForValue) {
+      if (takePositionResponseBuilder_ == null) {
+        takePositionResponse_ = builderForValue.build();
         onChanged();
       } else {
-        occupyPositionResponseBuilder_.setMessage(builderForValue.build());
+        takePositionResponseBuilder_.setMessage(builderForValue.build());
       }
 
       return this;
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
      */
-    public Builder mergeOccupyPositionResponse(com.gravitysketch.interview.OccupyPositionResponse value) {
-      if (occupyPositionResponseBuilder_ == null) {
-        if (occupyPositionResponse_ != null) {
-          occupyPositionResponse_ =
-            com.gravitysketch.interview.OccupyPositionResponse.newBuilder(occupyPositionResponse_).mergeFrom(value).buildPartial();
+    public Builder mergeTakePositionResponse(com.gravitysketch.interview.TakePositionResponse value) {
+      if (takePositionResponseBuilder_ == null) {
+        if (takePositionResponse_ != null) {
+          takePositionResponse_ =
+            com.gravitysketch.interview.TakePositionResponse.newBuilder(takePositionResponse_).mergeFrom(value).buildPartial();
         } else {
-          occupyPositionResponse_ = value;
+          takePositionResponse_ = value;
         }
         onChanged();
       } else {
-        occupyPositionResponseBuilder_.mergeFrom(value);
+        takePositionResponseBuilder_.mergeFrom(value);
       }
 
       return this;
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
      */
-    public Builder clearOccupyPositionResponse() {
-      if (occupyPositionResponseBuilder_ == null) {
-        occupyPositionResponse_ = null;
+    public Builder clearTakePositionResponse() {
+      if (takePositionResponseBuilder_ == null) {
+        takePositionResponse_ = null;
         onChanged();
       } else {
-        occupyPositionResponse_ = null;
-        occupyPositionResponseBuilder_ = null;
+        takePositionResponse_ = null;
+        takePositionResponseBuilder_ = null;
       }
 
       return this;
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
      */
-    public com.gravitysketch.interview.OccupyPositionResponse.Builder getOccupyPositionResponseBuilder() {
+    public com.gravitysketch.interview.TakePositionResponse.Builder getTakePositionResponseBuilder() {
       
       onChanged();
-      return getOccupyPositionResponseFieldBuilder().getBuilder();
+      return getTakePositionResponseFieldBuilder().getBuilder();
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
      */
-    public com.gravitysketch.interview.OccupyPositionResponseOrBuilder getOccupyPositionResponseOrBuilder() {
-      if (occupyPositionResponseBuilder_ != null) {
-        return occupyPositionResponseBuilder_.getMessageOrBuilder();
+    public com.gravitysketch.interview.TakePositionResponseOrBuilder getTakePositionResponseOrBuilder() {
+      if (takePositionResponseBuilder_ != null) {
+        return takePositionResponseBuilder_.getMessageOrBuilder();
       } else {
-        return occupyPositionResponse_ == null ?
-            com.gravitysketch.interview.OccupyPositionResponse.getDefaultInstance() : occupyPositionResponse_;
+        return takePositionResponse_ == null ?
+            com.gravitysketch.interview.TakePositionResponse.getDefaultInstance() : takePositionResponse_;
       }
     }
     /**
-     * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+     * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.gravitysketch.interview.OccupyPositionResponse, com.gravitysketch.interview.OccupyPositionResponse.Builder, com.gravitysketch.interview.OccupyPositionResponseOrBuilder> 
-        getOccupyPositionResponseFieldBuilder() {
-      if (occupyPositionResponseBuilder_ == null) {
-        occupyPositionResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.gravitysketch.interview.OccupyPositionResponse, com.gravitysketch.interview.OccupyPositionResponse.Builder, com.gravitysketch.interview.OccupyPositionResponseOrBuilder>(
-                getOccupyPositionResponse(),
+        com.gravitysketch.interview.TakePositionResponse, com.gravitysketch.interview.TakePositionResponse.Builder, com.gravitysketch.interview.TakePositionResponseOrBuilder> 
+        getTakePositionResponseFieldBuilder() {
+      if (takePositionResponseBuilder_ == null) {
+        takePositionResponseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.gravitysketch.interview.TakePositionResponse, com.gravitysketch.interview.TakePositionResponse.Builder, com.gravitysketch.interview.TakePositionResponseOrBuilder>(
+                getTakePositionResponse(),
                 getParentForChildren(),
                 isClean());
-        occupyPositionResponse_ = null;
+        takePositionResponse_ = null;
       }
-      return occupyPositionResponseBuilder_;
+      return takePositionResponseBuilder_;
     }
 
     private com.gravitysketch.interview.CheckGameResultResponse checkGameResultResponse_;

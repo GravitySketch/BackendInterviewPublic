@@ -8,13 +8,13 @@ public interface JoinGameResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.gravi.interview.JoinResult result = 1;</code>
+   * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
    * @return The enum numeric value on the wire for result.
    */
   int getResultValue();
   /**
-   * <code>.gravi.interview.JoinResult result = 1;</code>
+   * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
    * @return The result.
    */
-  com.gravitysketch.interview.JoinResult getResult();
+  com.gravitysketch.interview.JoinGameResponse.JoinResult getResult();
 }

@@ -3,8 +3,8 @@
 
 package com.gravitysketch.interview;
 
-public interface OccupyPositionRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:gravi.interview.OccupyPositionRequest)
+public interface TakePositionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:gravi.interview.TakePositionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -64,19 +64,19 @@ public interface RpcRequestOrBuilder extends
   com.gravitysketch.interview.JoinGameRequestOrBuilder getJoinGameRequestOrBuilder();
 
   /**
-   * <code>.gravi.interview.OccupyPositionRequest occupyPositionRequest = 13;</code>
-   * @return Whether the occupyPositionRequest field is set.
+   * <code>.gravi.interview.TakePositionRequest takePositionRequest = 13;</code>
+   * @return Whether the takePositionRequest field is set.
    */
-  boolean hasOccupyPositionRequest();
+  boolean hasTakePositionRequest();
   /**
-   * <code>.gravi.interview.OccupyPositionRequest occupyPositionRequest = 13;</code>
-   * @return The occupyPositionRequest.
+   * <code>.gravi.interview.TakePositionRequest takePositionRequest = 13;</code>
+   * @return The takePositionRequest.
    */
-  com.gravitysketch.interview.OccupyPositionRequest getOccupyPositionRequest();
+  com.gravitysketch.interview.TakePositionRequest getTakePositionRequest();
   /**
-   * <code>.gravi.interview.OccupyPositionRequest occupyPositionRequest = 13;</code>
+   * <code>.gravi.interview.TakePositionRequest takePositionRequest = 13;</code>
    */
-  com.gravitysketch.interview.OccupyPositionRequestOrBuilder getOccupyPositionRequestOrBuilder();
+  com.gravitysketch.interview.TakePositionRequestOrBuilder getTakePositionRequestOrBuilder();
 
   /**
    * <code>.gravi.interview.CheckGameResultRequest checkGameResultRequest = 14;</code>
