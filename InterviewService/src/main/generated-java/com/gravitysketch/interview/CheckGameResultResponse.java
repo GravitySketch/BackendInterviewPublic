@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CheckGameResultResponse() {
-    gameResult_ = 0;
   }
 
   @java.lang.Override
@@ -49,12 +48,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            gameResult_ = rawValue;
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -87,156 +80,6 @@ private static final long serialVersionUID = 0L;
             com.gravitysketch.interview.CheckGameResultResponse.class, com.gravitysketch.interview.CheckGameResultResponse.Builder.class);
   }
 
-  /**
-   * Protobuf enum {@code gravi.interview.CheckGameResultResponse.GameResult}
-   */
-  public enum GameResult
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>WaitMoreJoin = 0;</code>
-     */
-    WaitMoreJoin(0),
-    /**
-     * <code>Ongoing = 1;</code>
-     */
-    Ongoing(1),
-    /**
-     * <code>Win = 2;</code>
-     */
-    Win(2),
-    /**
-     * <code>Draw = 3;</code>
-     */
-    Draw(3),
-    /**
-     * <code>Lose = 4;</code>
-     */
-    Lose(4),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>WaitMoreJoin = 0;</code>
-     */
-    public static final int WaitMoreJoin_VALUE = 0;
-    /**
-     * <code>Ongoing = 1;</code>
-     */
-    public static final int Ongoing_VALUE = 1;
-    /**
-     * <code>Win = 2;</code>
-     */
-    public static final int Win_VALUE = 2;
-    /**
-     * <code>Draw = 3;</code>
-     */
-    public static final int Draw_VALUE = 3;
-    /**
-     * <code>Lose = 4;</code>
-     */
-    public static final int Lose_VALUE = 4;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static GameResult valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static GameResult forNumber(int value) {
-      switch (value) {
-        case 0: return WaitMoreJoin;
-        case 1: return Ongoing;
-        case 2: return Win;
-        case 3: return Draw;
-        case 4: return Lose;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<GameResult>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        GameResult> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<GameResult>() {
-            public GameResult findValueByNumber(int number) {
-              return GameResult.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.gravitysketch.interview.CheckGameResultResponse.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final GameResult[] VALUES = values();
-
-    public static GameResult valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private GameResult(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:gravi.interview.CheckGameResultResponse.GameResult)
-  }
-
-  public static final int GAMERESULT_FIELD_NUMBER = 1;
-  private int gameResult_;
-  /**
-   * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-   * @return The enum numeric value on the wire for gameResult.
-   */
-  public int getGameResultValue() {
-    return gameResult_;
-  }
-  /**
-   * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-   * @return The gameResult.
-   */
-  public com.gravitysketch.interview.CheckGameResultResponse.GameResult getGameResult() {
-    @SuppressWarnings("deprecation")
-    com.gravitysketch.interview.CheckGameResultResponse.GameResult result = com.gravitysketch.interview.CheckGameResultResponse.GameResult.valueOf(gameResult_);
-    return result == null ? com.gravitysketch.interview.CheckGameResultResponse.GameResult.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -251,9 +94,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (gameResult_ != com.gravitysketch.interview.CheckGameResultResponse.GameResult.WaitMoreJoin.getNumber()) {
-      output.writeEnum(1, gameResult_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -263,10 +103,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (gameResult_ != com.gravitysketch.interview.CheckGameResultResponse.GameResult.WaitMoreJoin.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, gameResult_);
-    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -282,7 +118,6 @@ private static final long serialVersionUID = 0L;
     }
     com.gravitysketch.interview.CheckGameResultResponse other = (com.gravitysketch.interview.CheckGameResultResponse) obj;
 
-    if (gameResult_ != other.gameResult_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -294,8 +129,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + GAMERESULT_FIELD_NUMBER;
-    hash = (53 * hash) + gameResult_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -429,8 +262,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      gameResult_ = 0;
-
       return this;
     }
 
@@ -457,7 +288,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.gravitysketch.interview.CheckGameResultResponse buildPartial() {
       com.gravitysketch.interview.CheckGameResultResponse result = new com.gravitysketch.interview.CheckGameResultResponse(this);
-      result.gameResult_ = gameResult_;
       onBuilt();
       return result;
     }
@@ -506,9 +336,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.gravitysketch.interview.CheckGameResultResponse other) {
       if (other == com.gravitysketch.interview.CheckGameResultResponse.getDefaultInstance()) return this;
-      if (other.gameResult_ != 0) {
-        setGameResultValue(other.getGameResultValue());
-      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -535,58 +362,6 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
-      return this;
-    }
-
-    private int gameResult_ = 0;
-    /**
-     * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-     * @return The enum numeric value on the wire for gameResult.
-     */
-    public int getGameResultValue() {
-      return gameResult_;
-    }
-    /**
-     * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-     * @param value The enum numeric value on the wire for gameResult to set.
-     * @return This builder for chaining.
-     */
-    public Builder setGameResultValue(int value) {
-      gameResult_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-     * @return The gameResult.
-     */
-    public com.gravitysketch.interview.CheckGameResultResponse.GameResult getGameResult() {
-      @SuppressWarnings("deprecation")
-      com.gravitysketch.interview.CheckGameResultResponse.GameResult result = com.gravitysketch.interview.CheckGameResultResponse.GameResult.valueOf(gameResult_);
-      return result == null ? com.gravitysketch.interview.CheckGameResultResponse.GameResult.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-     * @param value The gameResult to set.
-     * @return This builder for chaining.
-     */
-    public Builder setGameResult(com.gravitysketch.interview.CheckGameResultResponse.GameResult value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      gameResult_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearGameResult() {
-      
-      gameResult_ = 0;
-      onChanged();
       return this;
     }
     @java.lang.Override

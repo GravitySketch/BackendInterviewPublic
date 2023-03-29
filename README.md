@@ -11,13 +11,13 @@ Tic-tac-toe or Xs and Os, is a paper-and-pencil game for two players, X and O, w
 
 The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
 
-Follow the provided hello world rpc process and its UAT test example (com.gs.interviews.uat.rpcapi.handlers.HelloWorldUAT), implement the Tic-tac-toe game for players.
+Follow the provided hello world rpc process and its UAT test example (com.gs.interviews.uat.rpcapi.handlers.HelloWorldUAT), implement tests to play the Tic-tac-toe game.
 
 __The following tasks need to be completed in order for the game to be functional:__
 1. A player can create a new Tic-tac-toe game
 2. The second player can join the existing game
 3. Each player can place their X or O in turn
-4. Each player can query the game result: WaitMoreJoin, Ongoing, Win, Draw, Lose
+4. Each player can query the game result: `WaitMoreJoin`, `Ongoing`, `Win`, `Draw`, `Lose`
 
 
 ### InterviewService/proto

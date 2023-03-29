@@ -6,15 +6,4 @@ package com.gravitysketch.interview;
 public interface TakePositionResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:gravi.interview.TakePositionResponse)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-   * @return The enum numeric value on the wire for takePositionResponseCode.
-   */
-  int getTakePositionResponseCodeValue();
-  /**
-   * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-   * @return The takePositionResponseCode.
-   */
-  com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode getTakePositionResponseCode();
 }

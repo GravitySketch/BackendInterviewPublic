@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private JoinGameResponse() {
-    result_ = 0;
+    code_ = 0;
   }
 
   @java.lang.Override
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
           case 8: {
             int rawValue = input.readEnum();
 
-            result_ = rawValue;
+            code_ = rawValue;
             break;
           }
           default: {
@@ -88,9 +88,9 @@ private static final long serialVersionUID = 0L;
   }
 
   /**
-   * Protobuf enum {@code gravi.interview.JoinGameResponse.JoinResult}
+   * Protobuf enum {@code gravi.interview.JoinGameResponse.JoinGameResponseCode}
    */
-  public enum JoinResult
+  public enum JoinGameResponseCode
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
      * <code>JoinSuccess = 0;</code>
@@ -143,7 +143,7 @@ private static final long serialVersionUID = 0L;
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static JoinResult valueOf(int value) {
+    public static JoinGameResponseCode valueOf(int value) {
       return forNumber(value);
     }
 
@@ -151,7 +151,7 @@ private static final long serialVersionUID = 0L;
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static JoinResult forNumber(int value) {
+    public static JoinGameResponseCode forNumber(int value) {
       switch (value) {
         case 0: return JoinSuccess;
         case 1: return NoGame;
@@ -161,15 +161,15 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<JoinResult>
+    public static com.google.protobuf.Internal.EnumLiteMap<JoinGameResponseCode>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        JoinResult> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<JoinResult>() {
-            public JoinResult findValueByNumber(int number) {
-              return JoinResult.forNumber(number);
+        JoinGameResponseCode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<JoinGameResponseCode>() {
+            public JoinGameResponseCode findValueByNumber(int number) {
+              return JoinGameResponseCode.forNumber(number);
             }
           };
 
@@ -186,9 +186,9 @@ private static final long serialVersionUID = 0L;
       return com.gravitysketch.interview.JoinGameResponse.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final JoinResult[] VALUES = values();
+    private static final JoinGameResponseCode[] VALUES = values();
 
-    public static JoinResult valueOf(
+    public static JoinGameResponseCode valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -202,30 +202,30 @@ private static final long serialVersionUID = 0L;
 
     private final int value;
 
-    private JoinResult(int value) {
+    private JoinGameResponseCode(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:gravi.interview.JoinGameResponse.JoinResult)
+    // @@protoc_insertion_point(enum_scope:gravi.interview.JoinGameResponse.JoinGameResponseCode)
   }
 
-  public static final int RESULT_FIELD_NUMBER = 1;
-  private int result_;
+  public static final int CODE_FIELD_NUMBER = 1;
+  private int code_;
   /**
-   * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-   * @return The enum numeric value on the wire for result.
+   * <code>.gravi.interview.JoinGameResponse.JoinGameResponseCode code = 1;</code>
+   * @return The enum numeric value on the wire for code.
    */
-  public int getResultValue() {
-    return result_;
+  public int getCodeValue() {
+    return code_;
   }
   /**
-   * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-   * @return The result.
+   * <code>.gravi.interview.JoinGameResponse.JoinGameResponseCode code = 1;</code>
+   * @return The code.
    */
-  public com.gravitysketch.interview.JoinGameResponse.JoinResult getResult() {
+  public com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode getCode() {
     @SuppressWarnings("deprecation")
-    com.gravitysketch.interview.JoinGameResponse.JoinResult result = com.gravitysketch.interview.JoinGameResponse.JoinResult.valueOf(result_);
-    return result == null ? com.gravitysketch.interview.JoinGameResponse.JoinResult.UNRECOGNIZED : result;
+    com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode result = com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode.valueOf(code_);
+    return result == null ? com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -242,8 +242,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (result_ != com.gravitysketch.interview.JoinGameResponse.JoinResult.JoinSuccess.getNumber()) {
-      output.writeEnum(1, result_);
+    if (code_ != com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode.JoinSuccess.getNumber()) {
+      output.writeEnum(1, code_);
     }
     unknownFields.writeTo(output);
   }
@@ -254,9 +254,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (result_ != com.gravitysketch.interview.JoinGameResponse.JoinResult.JoinSuccess.getNumber()) {
+    if (code_ != com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode.JoinSuccess.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, result_);
+        .computeEnumSize(1, code_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -273,7 +273,7 @@ private static final long serialVersionUID = 0L;
     }
     com.gravitysketch.interview.JoinGameResponse other = (com.gravitysketch.interview.JoinGameResponse) obj;
 
-    if (result_ != other.result_) return false;
+    if (code_ != other.code_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -285,8 +285,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + RESULT_FIELD_NUMBER;
-    hash = (53 * hash) + result_;
+    hash = (37 * hash) + CODE_FIELD_NUMBER;
+    hash = (53 * hash) + code_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -420,7 +420,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      result_ = 0;
+      code_ = 0;
 
       return this;
     }
@@ -448,7 +448,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.gravitysketch.interview.JoinGameResponse buildPartial() {
       com.gravitysketch.interview.JoinGameResponse result = new com.gravitysketch.interview.JoinGameResponse(this);
-      result.result_ = result_;
+      result.code_ = code_;
       onBuilt();
       return result;
     }
@@ -497,8 +497,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.gravitysketch.interview.JoinGameResponse other) {
       if (other == com.gravitysketch.interview.JoinGameResponse.getDefaultInstance()) return this;
-      if (other.result_ != 0) {
-        setResultValue(other.getResultValue());
+      if (other.code_ != 0) {
+        setCodeValue(other.getCodeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -529,54 +529,54 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int result_ = 0;
+    private int code_ = 0;
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @return The enum numeric value on the wire for result.
+     * <code>.gravi.interview.JoinGameResponse.JoinGameResponseCode code = 1;</code>
+     * @return The enum numeric value on the wire for code.
      */
-    public int getResultValue() {
-      return result_;
+    public int getCodeValue() {
+      return code_;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @param value The enum numeric value on the wire for result to set.
+     * <code>.gravi.interview.JoinGameResponse.JoinGameResponseCode code = 1;</code>
+     * @param value The enum numeric value on the wire for code to set.
      * @return This builder for chaining.
      */
-    public Builder setResultValue(int value) {
-      result_ = value;
+    public Builder setCodeValue(int value) {
+      code_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @return The result.
+     * <code>.gravi.interview.JoinGameResponse.JoinGameResponseCode code = 1;</code>
+     * @return The code.
      */
-    public com.gravitysketch.interview.JoinGameResponse.JoinResult getResult() {
+    public com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode getCode() {
       @SuppressWarnings("deprecation")
-      com.gravitysketch.interview.JoinGameResponse.JoinResult result = com.gravitysketch.interview.JoinGameResponse.JoinResult.valueOf(result_);
-      return result == null ? com.gravitysketch.interview.JoinGameResponse.JoinResult.UNRECOGNIZED : result;
+      com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode result = com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode.valueOf(code_);
+      return result == null ? com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode.UNRECOGNIZED : result;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @param value The result to set.
+     * <code>.gravi.interview.JoinGameResponse.JoinGameResponseCode code = 1;</code>
+     * @param value The code to set.
      * @return This builder for chaining.
      */
-    public Builder setResult(com.gravitysketch.interview.JoinGameResponse.JoinResult value) {
+    public Builder setCode(com.gravitysketch.interview.JoinGameResponse.JoinGameResponseCode value) {
       if (value == null) {
         throw new NullPointerException();
       }
       
-      result_ = value.getNumber();
+      code_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
+     * <code>.gravi.interview.JoinGameResponse.JoinGameResponseCode code = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearResult() {
+    public Builder clearCode() {
       
-      result_ = 0;
+      code_ = 0;
       onChanged();
       return this;
     }

@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private TakePositionResponse() {
-    takePositionResponseCode_ = 0;
   }
 
   @java.lang.Override
@@ -49,12 +48,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 8: {
-            int rawValue = input.readEnum();
-
-            takePositionResponseCode_ = rawValue;
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -87,120 +80,6 @@ private static final long serialVersionUID = 0L;
             com.gravitysketch.interview.TakePositionResponse.class, com.gravitysketch.interview.TakePositionResponse.Builder.class);
   }
 
-  /**
-   * Protobuf enum {@code gravi.interview.TakePositionResponse.TakePositionResponseCode}
-   */
-  public enum TakePositionResponseCode
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>OccupySuccess = 0;</code>
-     */
-    OccupySuccess(0),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>OccupySuccess = 0;</code>
-     */
-    public static final int OccupySuccess_VALUE = 0;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static TakePositionResponseCode valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static TakePositionResponseCode forNumber(int value) {
-      switch (value) {
-        case 0: return OccupySuccess;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<TakePositionResponseCode>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        TakePositionResponseCode> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<TakePositionResponseCode>() {
-            public TakePositionResponseCode findValueByNumber(int number) {
-              return TakePositionResponseCode.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return com.gravitysketch.interview.TakePositionResponse.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final TakePositionResponseCode[] VALUES = values();
-
-    public static TakePositionResponseCode valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private TakePositionResponseCode(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:gravi.interview.TakePositionResponse.TakePositionResponseCode)
-  }
-
-  public static final int TAKEPOSITIONRESPONSECODE_FIELD_NUMBER = 1;
-  private int takePositionResponseCode_;
-  /**
-   * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-   * @return The enum numeric value on the wire for takePositionResponseCode.
-   */
-  public int getTakePositionResponseCodeValue() {
-    return takePositionResponseCode_;
-  }
-  /**
-   * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-   * @return The takePositionResponseCode.
-   */
-  public com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode getTakePositionResponseCode() {
-    @SuppressWarnings("deprecation")
-    com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode result = com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.valueOf(takePositionResponseCode_);
-    return result == null ? com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -215,9 +94,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (takePositionResponseCode_ != com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.OccupySuccess.getNumber()) {
-      output.writeEnum(1, takePositionResponseCode_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -227,10 +103,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (takePositionResponseCode_ != com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.OccupySuccess.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, takePositionResponseCode_);
-    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -246,7 +118,6 @@ private static final long serialVersionUID = 0L;
     }
     com.gravitysketch.interview.TakePositionResponse other = (com.gravitysketch.interview.TakePositionResponse) obj;
 
-    if (takePositionResponseCode_ != other.takePositionResponseCode_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -258,8 +129,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + TAKEPOSITIONRESPONSECODE_FIELD_NUMBER;
-    hash = (53 * hash) + takePositionResponseCode_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -393,8 +262,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      takePositionResponseCode_ = 0;
-
       return this;
     }
 
@@ -421,7 +288,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.gravitysketch.interview.TakePositionResponse buildPartial() {
       com.gravitysketch.interview.TakePositionResponse result = new com.gravitysketch.interview.TakePositionResponse(this);
-      result.takePositionResponseCode_ = takePositionResponseCode_;
       onBuilt();
       return result;
     }
@@ -470,9 +336,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.gravitysketch.interview.TakePositionResponse other) {
       if (other == com.gravitysketch.interview.TakePositionResponse.getDefaultInstance()) return this;
-      if (other.takePositionResponseCode_ != 0) {
-        setTakePositionResponseCodeValue(other.getTakePositionResponseCodeValue());
-      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -499,58 +362,6 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
-      return this;
-    }
-
-    private int takePositionResponseCode_ = 0;
-    /**
-     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-     * @return The enum numeric value on the wire for takePositionResponseCode.
-     */
-    public int getTakePositionResponseCodeValue() {
-      return takePositionResponseCode_;
-    }
-    /**
-     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-     * @param value The enum numeric value on the wire for takePositionResponseCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTakePositionResponseCodeValue(int value) {
-      takePositionResponseCode_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-     * @return The takePositionResponseCode.
-     */
-    public com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode getTakePositionResponseCode() {
-      @SuppressWarnings("deprecation")
-      com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode result = com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.valueOf(takePositionResponseCode_);
-      return result == null ? com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-     * @param value The takePositionResponseCode to set.
-     * @return This builder for chaining.
-     */
-    public Builder setTakePositionResponseCode(com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      
-      takePositionResponseCode_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearTakePositionResponseCode() {
-      
-      takePositionResponseCode_ = 0;
-      onChanged();
       return this;
     }
     @java.lang.Override
