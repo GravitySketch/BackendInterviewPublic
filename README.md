@@ -1,7 +1,10 @@
 # What to do
-
-* Read the provided code, apis, learn the code base and understand what they do and how they work
+* Set up the codebase and get familiar how it works
 * Learn Google protobuf https://developers.google.com/protocol-buffers
+
+## Pre-requisites
+* Java 17
+* Maven 3.x
 
 ### Practice
 Tic-tac-toe or Xs and Os, is a paper-and-pencil game for two players, X and O, who take turns marking spaces in a 3×3 grid.
@@ -24,27 +27,3 @@ For any proto file change, you should run `mvn clean compile` to re-generate the
   
 ### InterviewServiceUAT
 It contains a user acceptance test example to demo how to write a test for the rest api you provided.
-
-# Level of Requirements
-
-### Graduates to Junior level
-We expect you to be able to:
-* Learn and understand how Google protobuf works in this project.
-* Read and understand what the example code does.
-* Learn, understand and follow the rest api process flow.
-* Learn, follow the example, and write your own api implementation.
-
-You **don't** need to implement tasks 1, 2, 3, 4 and the game. You just need to be able to demonstrate the points above.
-
-We expect you to finish those bullet points in less than 3 hours.
-
-### Experienced Candidates
-We expect you to finish all points in graduate to junior level as well as meet the requirements listed above to complete the game in no more than 2 hours time.
-
-# What's next?
-
-### Graduates to Junior level
-Tell us if you are confident to meet our expectation or not. If you are, we would move to the next interview and discuss this project with you.
-
-### Experienced Candidates
-Submit your code implementation, we will review your code and give you our feedback. We will discuss your code and design with you in the next interview

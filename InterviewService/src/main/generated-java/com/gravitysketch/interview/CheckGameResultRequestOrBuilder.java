@@ -6,16 +6,4 @@ package com.gravitysketch.interview;
 public interface CheckGameResultRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:gravi.interview.CheckGameResultRequest)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>string gameId = 1;</code>
-   * @return The gameId.
-   */
-  java.lang.String getGameId();
-  /**
-   * <code>string gameId = 1;</code>
-   * @return The bytes for gameId.
-   */
-  com.google.protobuf.ByteString
-      getGameIdBytes();
 }
