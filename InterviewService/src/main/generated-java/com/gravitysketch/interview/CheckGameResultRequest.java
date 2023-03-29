@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CheckGameResultRequest() {
-    gameId_ = "";
   }
 
   @java.lang.Override
@@ -49,12 +48,6 @@ private static final long serialVersionUID = 0L;
           case 0:
             done = true;
             break;
-          case 10: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            gameId_ = s;
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -87,42 +80,6 @@ private static final long serialVersionUID = 0L;
             com.gravitysketch.interview.CheckGameResultRequest.class, com.gravitysketch.interview.CheckGameResultRequest.Builder.class);
   }
 
-  public static final int GAMEID_FIELD_NUMBER = 1;
-  private volatile java.lang.Object gameId_;
-  /**
-   * <code>string gameId = 1;</code>
-   * @return The gameId.
-   */
-  public java.lang.String getGameId() {
-    java.lang.Object ref = gameId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      gameId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string gameId = 1;</code>
-   * @return The bytes for gameId.
-   */
-  public com.google.protobuf.ByteString
-      getGameIdBytes() {
-    java.lang.Object ref = gameId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      gameId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -137,9 +94,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!getGameIdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, gameId_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -149,9 +103,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!getGameIdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, gameId_);
-    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -167,8 +118,6 @@ private static final long serialVersionUID = 0L;
     }
     com.gravitysketch.interview.CheckGameResultRequest other = (com.gravitysketch.interview.CheckGameResultRequest) obj;
 
-    if (!getGameId()
-        .equals(other.getGameId())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -180,8 +129,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + GAMEID_FIELD_NUMBER;
-    hash = (53 * hash) + getGameId().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -315,8 +262,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      gameId_ = "";
-
       return this;
     }
 
@@ -343,7 +288,6 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.gravitysketch.interview.CheckGameResultRequest buildPartial() {
       com.gravitysketch.interview.CheckGameResultRequest result = new com.gravitysketch.interview.CheckGameResultRequest(this);
-      result.gameId_ = gameId_;
       onBuilt();
       return result;
     }
@@ -392,10 +336,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.gravitysketch.interview.CheckGameResultRequest other) {
       if (other == com.gravitysketch.interview.CheckGameResultRequest.getDefaultInstance()) return this;
-      if (!other.getGameId().isEmpty()) {
-        gameId_ = other.gameId_;
-        onChanged();
-      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -422,82 +362,6 @@ private static final long serialVersionUID = 0L;
           mergeFrom(parsedMessage);
         }
       }
-      return this;
-    }
-
-    private java.lang.Object gameId_ = "";
-    /**
-     * <code>string gameId = 1;</code>
-     * @return The gameId.
-     */
-    public java.lang.String getGameId() {
-      java.lang.Object ref = gameId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        gameId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string gameId = 1;</code>
-     * @return The bytes for gameId.
-     */
-    public com.google.protobuf.ByteString
-        getGameIdBytes() {
-      java.lang.Object ref = gameId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        gameId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string gameId = 1;</code>
-     * @param value The gameId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setGameId(
-        java.lang.String value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  
-      gameId_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string gameId = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearGameId() {
-      
-      gameId_ = getDefaultInstance().getGameId();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string gameId = 1;</code>
-     * @param value The bytes for gameId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setGameIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-      
-      gameId_ = value;
-      onChanged();
       return this;
     }
     @java.lang.Override

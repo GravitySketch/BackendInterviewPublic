@@ -73,11 +73,7 @@ message JoinGameResponse {
     JoinResult result = 1;
 }
 
-message TakePositionRequest {
-    string userId = 1;
-    int32 x = 2;
-    int32 y = 3;
-}
+message TakePositionRequest {}
 
 message TakePositionResponse {
     enum TakePositionResponseCode {
@@ -89,9 +85,7 @@ message TakePositionResponse {
     TakePositionResponseCode takePositionResponseCode = 1;
 }
 
-message CheckGameResultRequest {
-    string gameId = 1;
-}
+message CheckGameResultRequest {}
 
 message CheckGameResultResponse {
     enum GameResult {

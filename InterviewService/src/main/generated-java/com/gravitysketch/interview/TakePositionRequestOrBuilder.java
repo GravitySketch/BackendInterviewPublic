@@ -6,28 +6,4 @@ package com.gravitysketch.interview;
 public interface TakePositionRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:gravi.interview.TakePositionRequest)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>string userId = 1;</code>
-   * @return The userId.
-   */
-  java.lang.String getUserId();
-  /**
-   * <code>string userId = 1;</code>
-   * @return The bytes for userId.
-   */
-  com.google.protobuf.ByteString
-      getUserIdBytes();
-
-  /**
-   * <code>int32 x = 2;</code>
-   * @return The x.
-   */
-  int getX();
-
-  /**
-   * <code>int32 y = 3;</code>
-   * @return The y.
-   */
-  int getY();
 }
