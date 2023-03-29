@@ -4,7 +4,6 @@
 
 ## Pre-requisites
 * Java 17
-* Maven 3.x
 
 ### Practice
 Tic-tac-toe or Xs and Os, is a paper-and-pencil game for two players, X and O, who take turns marking spaces in a 3×3 grid.
