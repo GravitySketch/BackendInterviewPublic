@@ -5,7 +5,7 @@ import com.gravitysketch.interview.RpcRequest;
 import com.gravitysketch.interview.RpcResponse;
 import com.gravitysketch.interview.RpcStatus;
 import com.gravitysketch.interview.RpcType;
-import com.gs.interviews.rpcapi.handlers.RpcApiHandler;
+import com.gs.interviews.resources.RpcApiHandler;
 
 import javax.ws.rs.core.Response;
 import java.io.IOException;

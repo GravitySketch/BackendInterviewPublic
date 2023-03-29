@@ -4,26 +4,26 @@
 package com.gravitysketch.interview;
 
 /**
- * Protobuf type {@code gravi.interview.JoinGameResponse}
+ * Protobuf type {@code gravi.interview.TakePositionResponse}
  */
-public  final class JoinGameResponse extends
+public  final class TakePositionResponse extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:gravi.interview.JoinGameResponse)
-    JoinGameResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:gravi.interview.TakePositionResponse)
+    TakePositionResponseOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use JoinGameResponse.newBuilder() to construct.
-  private JoinGameResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use TakePositionResponse.newBuilder() to construct.
+  private TakePositionResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private JoinGameResponse() {
-    result_ = 0;
+  private TakePositionResponse() {
+    takePositionResponseCode_ = 0;
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new JoinGameResponse();
+    return new TakePositionResponse();
   }
 
   @java.lang.Override
@@ -31,7 +31,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private JoinGameResponse(
+  private TakePositionResponse(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -52,7 +52,7 @@ private static final long serialVersionUID = 0L;
           case 8: {
             int rawValue = input.readEnum();
 
-            result_ = rawValue;
+            takePositionResponseCode_ = rawValue;
             break;
           }
           default: {
@@ -76,57 +76,33 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_JoinGameResponse_descriptor;
+    return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_TakePositionResponse_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_JoinGameResponse_fieldAccessorTable
+    return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_TakePositionResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.gravitysketch.interview.JoinGameResponse.class, com.gravitysketch.interview.JoinGameResponse.Builder.class);
+            com.gravitysketch.interview.TakePositionResponse.class, com.gravitysketch.interview.TakePositionResponse.Builder.class);
   }
 
   /**
-   * Protobuf enum {@code gravi.interview.JoinGameResponse.JoinResult}
+   * Protobuf enum {@code gravi.interview.TakePositionResponse.TakePositionResponseCode}
    */
-  public enum JoinResult
+  public enum TakePositionResponseCode
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
-     * <code>JoinSuccess = 0;</code>
+     * <code>OccupySuccess = 0;</code>
      */
-    JoinSuccess(0),
-    /**
-     * <code>NoGame = 1;</code>
-     */
-    NoGame(1),
-    /**
-     * <code>GameFinished = 2;</code>
-     */
-    GameFinished(2),
-    /**
-     * <code>GameIsFull = 3;</code>
-     */
-    GameIsFull(3),
+    OccupySuccess(0),
     UNRECOGNIZED(-1),
     ;
 
     /**
-     * <code>JoinSuccess = 0;</code>
+     * <code>OccupySuccess = 0;</code>
      */
-    public static final int JoinSuccess_VALUE = 0;
-    /**
-     * <code>NoGame = 1;</code>
-     */
-    public static final int NoGame_VALUE = 1;
-    /**
-     * <code>GameFinished = 2;</code>
-     */
-    public static final int GameFinished_VALUE = 2;
-    /**
-     * <code>GameIsFull = 3;</code>
-     */
-    public static final int GameIsFull_VALUE = 3;
+    public static final int OccupySuccess_VALUE = 0;
 
 
     public final int getNumber() {
@@ -143,7 +119,7 @@ private static final long serialVersionUID = 0L;
      * @deprecated Use {@link #forNumber(int)} instead.
      */
     @java.lang.Deprecated
-    public static JoinResult valueOf(int value) {
+    public static TakePositionResponseCode valueOf(int value) {
       return forNumber(value);
     }
 
@@ -151,25 +127,22 @@ private static final long serialVersionUID = 0L;
      * @param value The numeric wire value of the corresponding enum entry.
      * @return The enum associated with the given numeric wire value.
      */
-    public static JoinResult forNumber(int value) {
+    public static TakePositionResponseCode forNumber(int value) {
       switch (value) {
-        case 0: return JoinSuccess;
-        case 1: return NoGame;
-        case 2: return GameFinished;
-        case 3: return GameIsFull;
+        case 0: return OccupySuccess;
         default: return null;
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<JoinResult>
+    public static com.google.protobuf.Internal.EnumLiteMap<TakePositionResponseCode>
         internalGetValueMap() {
       return internalValueMap;
     }
     private static final com.google.protobuf.Internal.EnumLiteMap<
-        JoinResult> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<JoinResult>() {
-            public JoinResult findValueByNumber(int number) {
-              return JoinResult.forNumber(number);
+        TakePositionResponseCode> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<TakePositionResponseCode>() {
+            public TakePositionResponseCode findValueByNumber(int number) {
+              return TakePositionResponseCode.forNumber(number);
             }
           };
 
@@ -183,12 +156,12 @@ private static final long serialVersionUID = 0L;
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return com.gravitysketch.interview.JoinGameResponse.getDescriptor().getEnumTypes().get(0);
+      return com.gravitysketch.interview.TakePositionResponse.getDescriptor().getEnumTypes().get(0);
     }
 
-    private static final JoinResult[] VALUES = values();
+    private static final TakePositionResponseCode[] VALUES = values();
 
-    public static JoinResult valueOf(
+    public static TakePositionResponseCode valueOf(
         com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
@@ -202,30 +175,30 @@ private static final long serialVersionUID = 0L;
 
     private final int value;
 
-    private JoinResult(int value) {
+    private TakePositionResponseCode(int value) {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:gravi.interview.JoinGameResponse.JoinResult)
+    // @@protoc_insertion_point(enum_scope:gravi.interview.TakePositionResponse.TakePositionResponseCode)
   }
 
-  public static final int RESULT_FIELD_NUMBER = 1;
-  private int result_;
+  public static final int TAKEPOSITIONRESPONSECODE_FIELD_NUMBER = 1;
+  private int takePositionResponseCode_;
   /**
-   * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-   * @return The enum numeric value on the wire for result.
+   * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
+   * @return The enum numeric value on the wire for takePositionResponseCode.
    */
-  public int getResultValue() {
-    return result_;
+  public int getTakePositionResponseCodeValue() {
+    return takePositionResponseCode_;
   }
   /**
-   * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-   * @return The result.
+   * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
+   * @return The takePositionResponseCode.
    */
-  public com.gravitysketch.interview.JoinGameResponse.JoinResult getResult() {
+  public com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode getTakePositionResponseCode() {
     @SuppressWarnings("deprecation")
-    com.gravitysketch.interview.JoinGameResponse.JoinResult result = com.gravitysketch.interview.JoinGameResponse.JoinResult.valueOf(result_);
-    return result == null ? com.gravitysketch.interview.JoinGameResponse.JoinResult.UNRECOGNIZED : result;
+    com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode result = com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.valueOf(takePositionResponseCode_);
+    return result == null ? com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.UNRECOGNIZED : result;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -242,8 +215,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (result_ != com.gravitysketch.interview.JoinGameResponse.JoinResult.JoinSuccess.getNumber()) {
-      output.writeEnum(1, result_);
+    if (takePositionResponseCode_ != com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.OccupySuccess.getNumber()) {
+      output.writeEnum(1, takePositionResponseCode_);
     }
     unknownFields.writeTo(output);
   }
@@ -254,9 +227,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (result_ != com.gravitysketch.interview.JoinGameResponse.JoinResult.JoinSuccess.getNumber()) {
+    if (takePositionResponseCode_ != com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.OccupySuccess.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(1, result_);
+        .computeEnumSize(1, takePositionResponseCode_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -268,12 +241,12 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.gravitysketch.interview.JoinGameResponse)) {
+    if (!(obj instanceof com.gravitysketch.interview.TakePositionResponse)) {
       return super.equals(obj);
     }
-    com.gravitysketch.interview.JoinGameResponse other = (com.gravitysketch.interview.JoinGameResponse) obj;
+    com.gravitysketch.interview.TakePositionResponse other = (com.gravitysketch.interview.TakePositionResponse) obj;
 
-    if (result_ != other.result_) return false;
+    if (takePositionResponseCode_ != other.takePositionResponseCode_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -285,76 +258,76 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + RESULT_FIELD_NUMBER;
-    hash = (53 * hash) + result_;
+    hash = (37 * hash) + TAKEPOSITIONRESPONSECODE_FIELD_NUMBER;
+    hash = (53 * hash) + takePositionResponseCode_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(byte[] data)
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(java.io.InputStream input)
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.gravitysketch.interview.TakePositionResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseDelimitedFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.gravitysketch.interview.JoinGameResponse parseFrom(
+  public static com.gravitysketch.interview.TakePositionResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -367,7 +340,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.gravitysketch.interview.JoinGameResponse prototype) {
+  public static Builder newBuilder(com.gravitysketch.interview.TakePositionResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -383,26 +356,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code gravi.interview.JoinGameResponse}
+   * Protobuf type {@code gravi.interview.TakePositionResponse}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:gravi.interview.JoinGameResponse)
-      com.gravitysketch.interview.JoinGameResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:gravi.interview.TakePositionResponse)
+      com.gravitysketch.interview.TakePositionResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_JoinGameResponse_descriptor;
+      return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_TakePositionResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_JoinGameResponse_fieldAccessorTable
+      return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_TakePositionResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.gravitysketch.interview.JoinGameResponse.class, com.gravitysketch.interview.JoinGameResponse.Builder.class);
+              com.gravitysketch.interview.TakePositionResponse.class, com.gravitysketch.interview.TakePositionResponse.Builder.class);
     }
 
-    // Construct using com.gravitysketch.interview.JoinGameResponse.newBuilder()
+    // Construct using com.gravitysketch.interview.TakePositionResponse.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -420,7 +393,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      result_ = 0;
+      takePositionResponseCode_ = 0;
 
       return this;
     }
@@ -428,17 +401,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_JoinGameResponse_descriptor;
+      return com.gravitysketch.interview.Rpc.internal_static_gravi_interview_TakePositionResponse_descriptor;
     }
 
     @java.lang.Override
-    public com.gravitysketch.interview.JoinGameResponse getDefaultInstanceForType() {
-      return com.gravitysketch.interview.JoinGameResponse.getDefaultInstance();
+    public com.gravitysketch.interview.TakePositionResponse getDefaultInstanceForType() {
+      return com.gravitysketch.interview.TakePositionResponse.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.gravitysketch.interview.JoinGameResponse build() {
-      com.gravitysketch.interview.JoinGameResponse result = buildPartial();
+    public com.gravitysketch.interview.TakePositionResponse build() {
+      com.gravitysketch.interview.TakePositionResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -446,9 +419,9 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.gravitysketch.interview.JoinGameResponse buildPartial() {
-      com.gravitysketch.interview.JoinGameResponse result = new com.gravitysketch.interview.JoinGameResponse(this);
-      result.result_ = result_;
+    public com.gravitysketch.interview.TakePositionResponse buildPartial() {
+      com.gravitysketch.interview.TakePositionResponse result = new com.gravitysketch.interview.TakePositionResponse(this);
+      result.takePositionResponseCode_ = takePositionResponseCode_;
       onBuilt();
       return result;
     }
@@ -487,18 +460,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.gravitysketch.interview.JoinGameResponse) {
-        return mergeFrom((com.gravitysketch.interview.JoinGameResponse)other);
+      if (other instanceof com.gravitysketch.interview.TakePositionResponse) {
+        return mergeFrom((com.gravitysketch.interview.TakePositionResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.gravitysketch.interview.JoinGameResponse other) {
-      if (other == com.gravitysketch.interview.JoinGameResponse.getDefaultInstance()) return this;
-      if (other.result_ != 0) {
-        setResultValue(other.getResultValue());
+    public Builder mergeFrom(com.gravitysketch.interview.TakePositionResponse other) {
+      if (other == com.gravitysketch.interview.TakePositionResponse.getDefaultInstance()) return this;
+      if (other.takePositionResponseCode_ != 0) {
+        setTakePositionResponseCodeValue(other.getTakePositionResponseCodeValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -515,11 +488,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.gravitysketch.interview.JoinGameResponse parsedMessage = null;
+      com.gravitysketch.interview.TakePositionResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.gravitysketch.interview.JoinGameResponse) e.getUnfinishedMessage();
+        parsedMessage = (com.gravitysketch.interview.TakePositionResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -529,54 +502,54 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private int result_ = 0;
+    private int takePositionResponseCode_ = 0;
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @return The enum numeric value on the wire for result.
+     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
+     * @return The enum numeric value on the wire for takePositionResponseCode.
      */
-    public int getResultValue() {
-      return result_;
+    public int getTakePositionResponseCodeValue() {
+      return takePositionResponseCode_;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @param value The enum numeric value on the wire for result to set.
+     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
+     * @param value The enum numeric value on the wire for takePositionResponseCode to set.
      * @return This builder for chaining.
      */
-    public Builder setResultValue(int value) {
-      result_ = value;
+    public Builder setTakePositionResponseCodeValue(int value) {
+      takePositionResponseCode_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @return The result.
+     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
+     * @return The takePositionResponseCode.
      */
-    public com.gravitysketch.interview.JoinGameResponse.JoinResult getResult() {
+    public com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode getTakePositionResponseCode() {
       @SuppressWarnings("deprecation")
-      com.gravitysketch.interview.JoinGameResponse.JoinResult result = com.gravitysketch.interview.JoinGameResponse.JoinResult.valueOf(result_);
-      return result == null ? com.gravitysketch.interview.JoinGameResponse.JoinResult.UNRECOGNIZED : result;
+      com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode result = com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.valueOf(takePositionResponseCode_);
+      return result == null ? com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode.UNRECOGNIZED : result;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
-     * @param value The result to set.
+     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
+     * @param value The takePositionResponseCode to set.
      * @return This builder for chaining.
      */
-    public Builder setResult(com.gravitysketch.interview.JoinGameResponse.JoinResult value) {
+    public Builder setTakePositionResponseCode(com.gravitysketch.interview.TakePositionResponse.TakePositionResponseCode value) {
       if (value == null) {
         throw new NullPointerException();
       }
       
-      result_ = value.getNumber();
+      takePositionResponseCode_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.gravi.interview.JoinGameResponse.JoinResult result = 1;</code>
+     * <code>.gravi.interview.TakePositionResponse.TakePositionResponseCode takePositionResponseCode = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearResult() {
+    public Builder clearTakePositionResponseCode() {
       
-      result_ = 0;
+      takePositionResponseCode_ = 0;
       onChanged();
       return this;
     }
@@ -593,41 +566,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:gravi.interview.JoinGameResponse)
+    // @@protoc_insertion_point(builder_scope:gravi.interview.TakePositionResponse)
   }
 
-  // @@protoc_insertion_point(class_scope:gravi.interview.JoinGameResponse)
-  private static final com.gravitysketch.interview.JoinGameResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:gravi.interview.TakePositionResponse)
+  private static final com.gravitysketch.interview.TakePositionResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.gravitysketch.interview.JoinGameResponse();
+    DEFAULT_INSTANCE = new com.gravitysketch.interview.TakePositionResponse();
   }
 
-  public static com.gravitysketch.interview.JoinGameResponse getDefaultInstance() {
+  public static com.gravitysketch.interview.TakePositionResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<JoinGameResponse>
-      PARSER = new com.google.protobuf.AbstractParser<JoinGameResponse>() {
+  private static final com.google.protobuf.Parser<TakePositionResponse>
+      PARSER = new com.google.protobuf.AbstractParser<TakePositionResponse>() {
     @java.lang.Override
-    public JoinGameResponse parsePartialFrom(
+    public TakePositionResponse parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new JoinGameResponse(input, extensionRegistry);
+      return new TakePositionResponse(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<JoinGameResponse> parser() {
+  public static com.google.protobuf.Parser<TakePositionResponse> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<JoinGameResponse> getParserForType() {
+  public com.google.protobuf.Parser<TakePositionResponse> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.gravitysketch.interview.JoinGameResponse getDefaultInstanceForType() {
+  public com.gravitysketch.interview.TakePositionResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

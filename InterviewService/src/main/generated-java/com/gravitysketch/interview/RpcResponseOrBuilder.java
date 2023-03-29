@@ -64,19 +64,19 @@ public interface RpcResponseOrBuilder extends
   com.gravitysketch.interview.JoinGameResponseOrBuilder getJoinGameResponseOrBuilder();
 
   /**
-   * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
-   * @return Whether the occupyPositionResponse field is set.
+   * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
+   * @return Whether the takePositionResponse field is set.
    */
-  boolean hasOccupyPositionResponse();
+  boolean hasTakePositionResponse();
   /**
-   * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
-   * @return The occupyPositionResponse.
+   * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
+   * @return The takePositionResponse.
    */
-  com.gravitysketch.interview.OccupyPositionResponse getOccupyPositionResponse();
+  com.gravitysketch.interview.TakePositionResponse getTakePositionResponse();
   /**
-   * <code>.gravi.interview.OccupyPositionResponse occupyPositionResponse = 13;</code>
+   * <code>.gravi.interview.TakePositionResponse takePositionResponse = 13;</code>
    */
-  com.gravitysketch.interview.OccupyPositionResponseOrBuilder getOccupyPositionResponseOrBuilder();
+  com.gravitysketch.interview.TakePositionResponseOrBuilder getTakePositionResponseOrBuilder();
 
   /**
    * <code>.gravi.interview.CheckGameResultResponse checkGameResultResponse = 14;</code>

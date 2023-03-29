@@ -55,15 +55,15 @@ public final class Rpc {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_gravi_interview_JoinGameResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_gravi_interview_OccupyPositionRequest_descriptor;
+    internal_static_gravi_interview_TakePositionRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_gravi_interview_OccupyPositionRequest_fieldAccessorTable;
+      internal_static_gravi_interview_TakePositionRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_gravi_interview_OccupyPositionResponse_descriptor;
+    internal_static_gravi_interview_TakePositionResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_gravi_interview_OccupyPositionResponse_fieldAccessorTable;
+      internal_static_gravi_interview_TakePositionResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_gravi_interview_CheckGameResultRequest_descriptor;
   static final 
@@ -83,51 +83,52 @@ public final class Rpc {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\trpc.proto\022\017gravi.interview\"\200\003\n\nRpcRequ" +
+      "\n\trpc.proto\022\017gravi.interview\"\374\002\n\nRpcRequ" +
       "est\022)\n\007rpcType\030\001 \001(\0162\030.gravi.interview.R" +
       "pcType\022=\n\021helloWorldRequest\030\n \001(\0132\".grav" +
       "i.interview.HelloWorldRequest\022=\n\021createG" +
       "ameRequest\030\013 \001(\0132\".gravi.interview.Creat" +
       "eGameRequest\0229\n\017joinGameRequest\030\014 \001(\0132 ." +
-      "gravi.interview.JoinGameRequest\022E\n\025occup" +
-      "yPositionRequest\030\r \001(\0132&.gravi.interview" +
-      ".OccupyPositionRequest\022G\n\026checkGameResul" +
-      "tRequest\030\016 \001(\0132\'.gravi.interview.CheckGa" +
-      "meResultRequest\"\216\003\n\013RpcResponse\022*\n\006statu" +
-      "s\030\001 \001(\0162\032.gravi.interview.RpcStatus\022A\n\023h" +
-      "ellowWorldResponse\030\n \001(\0132$.gravi.intervi" +
-      "ew.HellowWorldResponse\022?\n\022createGameResp" +
-      "onse\030\013 \001(\0132#.gravi.interview.CreateGameR" +
-      "esponse\022;\n\020joinGameResponse\030\014 \001(\0132!.grav" +
-      "i.interview.JoinGameResponse\022G\n\026occupyPo" +
-      "sitionResponse\030\r \001(\0132\'.gravi.interview.O" +
-      "ccupyPositionResponse\022I\n\027checkGameResult" +
-      "Response\030\016 \001(\0132(.gravi.interview.CheckGa" +
-      "meResultResponse\",\n\021HelloWorldRequest\022\027\n" +
-      "\017greatingMessage\030\001 \001(\t\".\n\023HellowWorldRes" +
-      "ponse\022\027\n\017returnedMessage\030\001 \001(\t\"#\n\021Create" +
-      "GameRequest\022\016\n\006userId\030\001 \001(\t\"$\n\022CreateGam" +
-      "eResponse\022\016\n\006gameId\030\001 \001(\t\"1\n\017JoinGameReq" +
-      "uest\022\016\n\006userId\030\001 \001(\t\022\016\n\006gameId\030\002 \001(\t\"?\n\020" +
-      "JoinGameResponse\022+\n\006result\030\001 \001(\0162\033.gravi" +
-      ".interview.JoinResult\"=\n\025OccupyPositionR" +
-      "equest\022\016\n\006userId\030\001 \001(\t\022\t\n\001x\030\002 \001(\005\022\t\n\001y\030\003" +
-      " \001(\005\"M\n\026OccupyPositionResponse\0223\n\014occupy" +
-      "Result\030\001 \001(\0162\035.gravi.interview.OccupyRes" +
-      "ult\"(\n\026CheckGameResultRequest\022\016\n\006gameId\030" +
-      "\001 \001(\t\"J\n\027CheckGameResultResponse\022/\n\ngame" +
-      "Result\030\001 \001(\0162\033.gravi.interview.GameResul" +
-      "t*a\n\007RpcType\022\017\n\013HellowWorld\020\000\022\016\n\nCreateG" +
-      "ame\020\001\022\014\n\010JoinGame\020\002\022\022\n\016OccupyPosition\020\003\022" +
-      "\023\n\017CheckGameResult\020\004*+\n\tRpcStatus\022\013\n\007NoE" +
-      "rror\020\000\022\021\n\rUnknownStatus\020\001*K\n\nJoinResult\022" +
-      "\017\n\013JoinSuccess\020\000\022\n\n\006NoGame\020\001\022\020\n\014GameFini" +
-      "shed\020\002\022\016\n\nGameIsFull\020\003*H\n\014OccupyResult\022\021" +
-      "\n\rOccupySuccess\020\000\022\020\n\014HasBeenTaken\020\001\022\023\n\017I" +
-      "nvalidPosition\020\002*H\n\nGameResult\022\020\n\014WaitMo" +
-      "reJoin\020\000\022\013\n\007Ongoing\020\001\022\007\n\003Win\020\002\022\010\n\004Draw\020\003" +
-      "\022\010\n\004Lose\020\004B\037\n\033com.gravitysketch.intervie" +
-      "wP\001b\006proto3"
+      "gravi.interview.JoinGameRequest\022A\n\023takeP" +
+      "ositionRequest\030\r \001(\0132$.gravi.interview.T" +
+      "akePositionRequest\022G\n\026checkGameResultReq" +
+      "uest\030\016 \001(\0132\'.gravi.interview.CheckGameRe" +
+      "sultRequest\"\212\003\n\013RpcResponse\022*\n\006status\030\001 " +
+      "\001(\0162\032.gravi.interview.RpcStatus\022A\n\023hello" +
+      "wWorldResponse\030\n \001(\0132$.gravi.interview.H" +
+      "ellowWorldResponse\022?\n\022createGameResponse" +
+      "\030\013 \001(\0132#.gravi.interview.CreateGameRespo" +
+      "nse\022;\n\020joinGameResponse\030\014 \001(\0132!.gravi.in" +
+      "terview.JoinGameResponse\022C\n\024takePosition" +
+      "Response\030\r \001(\0132%.gravi.interview.TakePos" +
+      "itionResponse\022I\n\027checkGameResultResponse" +
+      "\030\016 \001(\0132(.gravi.interview.CheckGameResult" +
+      "Response\",\n\021HelloWorldRequest\022\027\n\017greatin" +
+      "gMessage\030\001 \001(\t\".\n\023HellowWorldResponse\022\027\n" +
+      "\017returnedMessage\030\001 \001(\t\"#\n\021CreateGameRequ" +
+      "est\022\016\n\006userId\030\001 \001(\t\"$\n\022CreateGameRespons" +
+      "e\022\016\n\006gameId\030\001 \001(\t\"1\n\017JoinGameRequest\022\016\n\006" +
+      "userId\030\001 \001(\t\022\016\n\006gameId\030\002 \001(\t\"\235\001\n\020JoinGam" +
+      "eResponse\022<\n\006result\030\001 \001(\0162,.gravi.interv" +
+      "iew.JoinGameResponse.JoinResult\"K\n\nJoinR" +
+      "esult\022\017\n\013JoinSuccess\020\000\022\n\n\006NoGame\020\001\022\020\n\014Ga" +
+      "meFinished\020\002\022\016\n\nGameIsFull\020\003\";\n\023TakePosi" +
+      "tionRequest\022\016\n\006userId\030\001 \001(\t\022\t\n\001x\030\002 \001(\005\022\t" +
+      "\n\001y\030\003 \001(\005\"\247\001\n\024TakePositionResponse\022`\n\030ta" +
+      "kePositionResponseCode\030\001 \001(\0162>.gravi.int" +
+      "erview.TakePositionResponse.TakePosition" +
+      "ResponseCode\"-\n\030TakePositionResponseCode" +
+      "\022\021\n\rOccupySuccess\020\000\"(\n\026CheckGameResultRe" +
+      "quest\022\016\n\006gameId\030\001 \001(\t\"\254\001\n\027CheckGameResul" +
+      "tResponse\022G\n\ngameResult\030\001 \001(\01623.gravi.in" +
+      "terview.CheckGameResultResponse.GameResu" +
+      "lt\"H\n\nGameResult\022\020\n\014WaitMoreJoin\020\000\022\013\n\007On" +
+      "going\020\001\022\007\n\003Win\020\002\022\010\n\004Draw\020\003\022\010\n\004Lose\020\004*_\n\007" +
+      "RpcType\022\017\n\013HellowWorld\020\000\022\016\n\nCreateGame\020\001" +
+      "\022\014\n\010JoinGame\020\002\022\020\n\014TakePosition\020\003\022\023\n\017Chec" +
+      "kGameResult\020\004*+\n\tRpcStatus\022\013\n\007NoError\020\000\022" +
+      "\021\n\rUnknownStatus\020\001B\037\n\033com.gravitysketch." +
+      "interviewP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -138,13 +139,13 @@ public final class Rpc {
     internal_static_gravi_interview_RpcRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_gravi_interview_RpcRequest_descriptor,
-        new java.lang.String[] { "RpcType", "HelloWorldRequest", "CreateGameRequest", "JoinGameRequest", "OccupyPositionRequest", "CheckGameResultRequest", });
+        new java.lang.String[] { "RpcType", "HelloWorldRequest", "CreateGameRequest", "JoinGameRequest", "TakePositionRequest", "CheckGameResultRequest", });
     internal_static_gravi_interview_RpcResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_gravi_interview_RpcResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_gravi_interview_RpcResponse_descriptor,
-        new java.lang.String[] { "Status", "HellowWorldResponse", "CreateGameResponse", "JoinGameResponse", "OccupyPositionResponse", "CheckGameResultResponse", });
+        new java.lang.String[] { "Status", "HellowWorldResponse", "CreateGameResponse", "JoinGameResponse", "TakePositionResponse", "CheckGameResultResponse", });
     internal_static_gravi_interview_HelloWorldRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_gravi_interview_HelloWorldRequest_fieldAccessorTable = new
@@ -181,18 +182,18 @@ public final class Rpc {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_gravi_interview_JoinGameResponse_descriptor,
         new java.lang.String[] { "Result", });
-    internal_static_gravi_interview_OccupyPositionRequest_descriptor =
+    internal_static_gravi_interview_TakePositionRequest_descriptor =
       getDescriptor().getMessageTypes().get(8);
-    internal_static_gravi_interview_OccupyPositionRequest_fieldAccessorTable = new
+    internal_static_gravi_interview_TakePositionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_gravi_interview_OccupyPositionRequest_descriptor,
+        internal_static_gravi_interview_TakePositionRequest_descriptor,
         new java.lang.String[] { "UserId", "X", "Y", });
-    internal_static_gravi_interview_OccupyPositionResponse_descriptor =
+    internal_static_gravi_interview_TakePositionResponse_descriptor =
       getDescriptor().getMessageTypes().get(9);
-    internal_static_gravi_interview_OccupyPositionResponse_fieldAccessorTable = new
+    internal_static_gravi_interview_TakePositionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_gravi_interview_OccupyPositionResponse_descriptor,
-        new java.lang.String[] { "OccupyResult", });
+        internal_static_gravi_interview_TakePositionResponse_descriptor,
+        new java.lang.String[] { "TakePositionResponseCode", });
     internal_static_gravi_interview_CheckGameResultRequest_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_gravi_interview_CheckGameResultRequest_fieldAccessorTable = new

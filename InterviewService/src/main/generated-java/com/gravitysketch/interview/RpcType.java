@@ -21,9 +21,9 @@ public enum RpcType
    */
   JoinGame(2),
   /**
-   * <code>OccupyPosition = 3;</code>
+   * <code>TakePosition = 3;</code>
    */
-  OccupyPosition(3),
+  TakePosition(3),
   /**
    * <code>CheckGameResult = 4;</code>
    */
@@ -44,9 +44,9 @@ public enum RpcType
    */
   public static final int JoinGame_VALUE = 2;
   /**
-   * <code>OccupyPosition = 3;</code>
+   * <code>TakePosition = 3;</code>
    */
-  public static final int OccupyPosition_VALUE = 3;
+  public static final int TakePosition_VALUE = 3;
   /**
    * <code>CheckGameResult = 4;</code>
    */
@@ -80,7 +80,7 @@ public enum RpcType
       case 0: return HellowWorld;
       case 1: return CreateGame;
       case 2: return JoinGame;
-      case 3: return OccupyPosition;
+      case 3: return TakePosition;
       case 4: return CheckGameResult;
       default: return null;
     }

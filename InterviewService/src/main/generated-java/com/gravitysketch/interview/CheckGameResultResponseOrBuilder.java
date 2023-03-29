@@ -8,13 +8,13 @@ public interface CheckGameResultResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.gravi.interview.GameResult gameResult = 1;</code>
+   * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
    * @return The enum numeric value on the wire for gameResult.
    */
   int getGameResultValue();
   /**
-   * <code>.gravi.interview.GameResult gameResult = 1;</code>
+   * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
    * @return The gameResult.
    */
-  com.gravitysketch.interview.GameResult getGameResult();
+  com.gravitysketch.interview.CheckGameResultResponse.GameResult getGameResult();
 }
