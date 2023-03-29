@@ -6,15 +6,4 @@ package com.gravitysketch.interview;
 public interface CheckGameResultResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:gravi.interview.CheckGameResultResponse)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-   * @return The enum numeric value on the wire for gameResult.
-   */
-  int getGameResultValue();
-  /**
-   * <code>.gravi.interview.CheckGameResultResponse.GameResult gameResult = 1;</code>
-   * @return The gameResult.
-   */
-  com.gravitysketch.interview.CheckGameResultResponse.GameResult getGameResult();
 }

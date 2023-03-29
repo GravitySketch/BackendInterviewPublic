@@ -63,38 +63,20 @@ message JoinGameRequest {
 }
 
 message JoinGameResponse {
-    enum JoinResult {
+    enum JoinGameResponseCode {
         JoinSuccess = 0;
         NoGame = 1;
         GameFinished = 2;
         GameIsFull = 3;
     }
 
-    JoinResult result = 1;
+    JoinGameResponseCode code = 1;
 }
 
 message TakePositionRequest {}
 
-message TakePositionResponse {
-    enum TakePositionResponseCode {
-        OccupySuccess = 0;
-
-        // TODO what more code could it need
-    }
-
-    TakePositionResponseCode takePositionResponseCode = 1;
-}
+message TakePositionResponse {}
 
 message CheckGameResultRequest {}
 
-message CheckGameResultResponse {
-    enum GameResult {
-        WaitMoreJoin = 0;
-        Ongoing = 1;
-        Win = 2;
-        Draw = 3;
-        Lose = 4;
-    }
-
-    GameResult gameResult = 1;
-}
+message CheckGameResultResponse {}
