@@ -32,12 +32,14 @@ public class TicTacToeGame {
 
     public Optional<String> getWinnerId() {
         for (var i = 0; i < boardSize; i++) {
-            var startId = board[i][0];
-            for (var j = 1; j < boardSize; j++) {
-                var currentId = board[i][j];
-                if (currentId.equals(startId)) {
-                    return Optional.of(startId);
-                }
+            if (board[i][0].equals(board[i][1]) && board[i][0].equals((board[i][2]))) {
+                return Optional.of(board[i][0]);
+            }
+        }
+
+        for (var i = 0; i < boardSize; i++) {
+            if (board[0][i].equals(board[1][i]) && board[0][i].equals((board[i][2]))) {
+                return Optional.of(board[i][0]);
             }
         }
 
