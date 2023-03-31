@@ -8,7 +8,7 @@
   recommend 
   * [Intellij Community Edition](https://www.jetbrains.com/idea/) or 
   * [Visual Studio Code](https://code.visualstudio.com/) 
-  with [Extension Pack for java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+  with [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
 ### Practice
 Tic-tac-toe or Xs and Os, is a paper-and-pencil game for two players, X and O, who take turns marking spaces in a 3×3 grid.
