@@ -9,7 +9,7 @@ enum RpcType{
     HellowWorld = 0;
     CreateGame = 1;
     JoinGame = 2;
-    OccupyPosition = 3;
+    TakePosition = 3;
     CheckGameResult = 4;
 }
 
@@ -26,7 +26,7 @@ message RpcRequest {
     HelloWorldRequest helloWorldRequest = 10;
     CreateGameRequest createGameRequest = 11;
     JoinGameRequest joinGameRequest = 12;
-    OccupyPositionRequest occupyPositionRequest = 13;
+    TakePositionRequest takePositionRequest = 13;
     CheckGameResultRequest checkGameResultRequest = 14;
 }
 
@@ -36,7 +36,7 @@ message RpcResponse {
     HellowWorldResponse hellowWorldResponse = 10;
     CreateGameResponse createGameResponse = 11;
     JoinGameResponse joinGameResponse = 12;
-    OccupyPositionResponse occupyPositionResponse = 13;
+    TakePositionResponse takePositionResponse = 13;
     CheckGameResultResponse checkGameResultResponse = 14;
 }
 
@@ -62,46 +62,21 @@ message JoinGameRequest {
     string gameId = 2;
 }
 
-enum JoinResult {
-    JoinSuccess = 0;
-    NoGame = 1;
-    GameFinished = 2;
-    GameIsFull = 3;
-}
-
 message JoinGameResponse {
-    JoinResult result = 1;
+    enum JoinGameResponseCode {
+        JoinSuccess = 0;
+        NoGame = 1;
+        GameFinished = 2;
+        GameIsFull = 3;
+    }
+
+    JoinGameResponseCode code = 1;
 }
 
-message OccupyPositionRequest {
-    string userId = 1;
-    int32 x = 2;
-    int32 y = 3;
-}
+message TakePositionRequest {}
 
-enum OccupyResult {
-    OccupySuccess = 0;
-    HasBeenTaken = 1;
-    InvalidPosition = 2;
-}
+message TakePositionResponse {}
 
-enum GameResult {
-    WaitMoreJoin = 0;
-    Ongoing = 1;
-    Win = 2;
-    Draw = 3;
-    Lose = 4;
-}
+message CheckGameResultRequest {}
 
-message OccupyPositionResponse {
-    OccupyResult occupyResult = 1;
-    GameResult gameResult = 2;
-}
-
-message CheckGameResultRequest {
-    string gameId = 1;
-}
-
-message CheckGameResultResponse {
-    GameResult gameResult = 1;
-}
+message CheckGameResultResponse {}
