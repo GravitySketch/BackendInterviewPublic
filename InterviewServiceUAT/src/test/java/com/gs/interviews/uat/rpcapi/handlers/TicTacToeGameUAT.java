@@ -21,24 +21,32 @@ public class TicTacToeGameUAT extends InterviewServiceUAT {
 
     @Test(groups = {"interview-service"})
     public void testPlayTheGame() throws Exception {
-        final var createGameRes = mustSend(RpcRequest.newBuilder()
-                .setCreateGameRequest(
-                        CreateGameRequest
-                                .newBuilder()
-                                .setUserId(USER_1)
-                                .build()
-                ).build()).getCreateGameResponse();
+        final var createGameRes = createGame(CreateGameRequest
+                .newBuilder()
+                .setUserId(USER_1)
+                .build());
 
-        final var joinGameRes = mustSend(RpcRequest.newBuilder()
-                .setJoinGameRequest(
-                        JoinGameRequest
-                                .newBuilder()
-                                .setUserId(USER_1)
-                                .setGameId(createGameRes.getGameId())
-                                .build()
-                ).build());
+        Assert.assertEquals(createGameRes.getGameId(), "");
+
+        final var joinGameRes = joinGame(JoinGameRequest
+                .newBuilder()
+                .setUserId(USER_1)
+                .setGameId(createGameRes.getGameId())
+                .build());
 
         // TODO add more steps to test playing the game
+    }
+
+    private CreateGameResponse createGame(CreateGameRequest req) throws Exception {
+        return mustSend(RpcRequest.newBuilder()
+                .setCreateGameRequest(req)
+                .build()).getCreateGameResponse();
+    }
+
+    private JoinGameResponse joinGame(JoinGameRequest req) throws Exception {
+        return mustSend(RpcRequest.newBuilder()
+                .setJoinGameRequest(req)
+                .build()).getJoinGameResponse();
     }
 
     private RpcResponse mustSend(RpcRequest req) throws Exception {

@@ -5,3 +5,12 @@ server:
   adminConnectors:
   - type: http
     port: 20999
+
+logging:
+
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: ERROR
+
+  # Logger-specific levels.
+  loggers:
+    com.gs: DEBUG
