@@ -1,1 +1,0 @@
-protoc -I=proto/ --java_out=src/main/generated-java proto/rpc.proto
