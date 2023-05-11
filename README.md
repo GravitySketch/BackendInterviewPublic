@@ -10,7 +10,15 @@
   * [Visual Studio Code](https://code.visualstudio.com/) 
   with [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
 
-### Practice
+### InterviewService/proto
+rpc.proto defines the api provided by the service. It has defined 5 rpc apis. HelloWorldRequest is the example api and others are the apis for the practice tasks.
+
+For any proto file change, you should run `./mvnw clean compile` to re-generate the java code for the changes.
+  
+### InterviewServiceUAT
+It contains a user acceptance test example to demo how to write a test for the rest api you provided.
+
+# Task (To be completed during the interview, do not attempt beforehand)
 Tic-tac-toe or Xs and Os, is a paper-and-pencil game for two players, X and O, who take turns marking spaces in a 3×3 grid.
 
 The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
@@ -22,12 +30,3 @@ __The following tasks need to be completed in order for the game to be functiona
 2. The second player can join the existing game
 3. Each player can place their X or O in turn
 4. Each player can query the game result: `WaitMoreJoin`, `Ongoing`, `Win`, `Draw`, `Lose`
-
-
-### InterviewService/proto
-rpc.proto defines the api provided by the service. It has defined 5 rpc apis. HelloWorldRequest is the example api and others are the apis for the practice tasks.
-
-For any proto file change, you should run `./mvnw clean compile` to re-generate the java code for the changes.
-  
-### InterviewServiceUAT
-It contains a user acceptance test example to demo how to write a test for the rest api you provided.
