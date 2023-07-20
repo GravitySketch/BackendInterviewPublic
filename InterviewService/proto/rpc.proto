@@ -64,10 +64,11 @@ message JoinGameRequest {
 
 message JoinGameResponse {
     enum JoinGameResponseCode {
-        JoinSuccess = 0;
-        NoGame = 1;
-        GameFinished = 2;
-        GameIsFull = 3;
+        Unset = 0;
+        JoinSuccess = 1;
+        NoGame = 2;
+        GameFinished = 3;
+        GameIsFull = 4;
     }
 
     JoinGameResponseCode code = 1;
