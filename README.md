@@ -1,22 +1,17 @@
-# What to do
-* Set up the codebase and get familiar how it works
-* Learn Google protobuf https://developers.google.com/protocol-buffers
+# What to do before the interview
+* Check out the codebase and get familiar how it works such as
+  * Google protobuf https://developers.google.com/protocol-buffers
+* Set up your local development environment
+  * Java 17
+  * IDE of your preference such as
+    * [Intellij Community Edition](https://www.jetbrains.com/idea/) or
+    * [Visual Studio Code](https://code.visualstudio.com/)
+      with [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+    * Make sure you can put breakpoints and debug the code using IDE which would help massively, especially for the UAT project
 
-## Pre-requisites
-* Java 17
-* Ensure that you have set up a local development environment such that debugger is available to you when needed. We 
-  recommend 
-  * [Intellij Community Edition](https://www.jetbrains.com/idea/) or 
-  * [Visual Studio Code](https://code.visualstudio.com/) 
-  with [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
-
-### InterviewService/proto
-rpc.proto defines the api provided by the service. It has defined 5 rpc apis. HelloWorldRequest is the example api and others are the apis for the practice tasks.
-
-For any proto file change, you should run `./mvnw clean compile` to re-generate the java code for the changes.
-  
-### InterviewServiceUAT
-It contains a user acceptance test example to demo how to write a test for the rest api you provided.
+## Useful maven commands
+* `./mvnw clean compile` to regenerate code from protobuf definitions and compile the code
+* `./mvnw test` to run all the tests
 
 # Task (To be completed during the interview, do not attempt beforehand)
 Tic-tac-toe or Xs and Os, is a paper-and-pencil game for two players, X and O, who take turns marking spaces in a 3×3 grid.
