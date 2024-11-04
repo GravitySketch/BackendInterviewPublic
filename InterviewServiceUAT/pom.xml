@@ -13,7 +13,7 @@
     </parent>
 
     <properties>
-        <apacheio.version>2.6</apacheio.version>
+        <apacheio.version>2.14.0</apacheio.version>
         <httpcomponents.httpclient.version>4.5.5</httpcomponents.httpclient.version>
     </properties>
 
